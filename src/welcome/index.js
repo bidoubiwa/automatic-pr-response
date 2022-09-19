@@ -4,6 +4,8 @@ const github = require('@actions/github');
 (async () => {
   try {
     const githubToken = core.getInput('github-token', { required: true });
+   console.log({ githubToken })
+   
     const issueMessage = core.getInput('issue-message');
     const prMessage = core.getInput('pr-message');
     const footer = core.getInput('footer');
